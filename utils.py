@@ -18,3 +18,7 @@ def binding(class_):
             return func(obj, *args, **kwargs)
         return inner_wrappper
     return outer_wrapper
+
+
+def requestdata_message():
+    return "Hello! Your IP is {} and you are using {}: ".format(request.remote_addr, request.user_agent)
